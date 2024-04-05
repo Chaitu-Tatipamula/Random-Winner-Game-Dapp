@@ -80,9 +80,8 @@ export default function Home() {
           abi,
           signer 
         )
-
         const tx = await contractInstance.joinGame({
-          value : ethers.parseEther(entryfee)
+          value : entryfee
         })
         setLoading(true)
         await tx.wait()
